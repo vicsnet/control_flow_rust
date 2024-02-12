@@ -17,6 +17,8 @@ fn main() {
     repetition_in_loop();
 
     multiple_loop();
+
+    conditional_loop_with_while();
 }
 fn multiple_condition(){
     let number = 6;
@@ -73,4 +75,13 @@ fn multiple_loop(){
         count += 1;
     }
     println!("End count = {count}");
+}
+fn conditional_loop_with_while(){
+    let mut number = 3;
+    while number != 0{
+        println!("{number}!");
+        number -= 1;
+    }
+
+    println!("LIFTOFF!!!");
 }
