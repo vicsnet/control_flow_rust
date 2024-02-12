@@ -104,4 +104,9 @@ fn looping_with_for() {
     for element in b {
         println!("the value in element is: {element}");
     }
+
+    for number in (1..4).rev() {
+        println!("{number}!");
+    }
+    println!("LIFTOFF!!!");
 }
