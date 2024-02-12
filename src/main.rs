@@ -13,6 +13,8 @@ fn main() {
     multiple_condition();
 
     if_in_let_statement();
+
+    repetition_in_loop();
 }
 fn multiple_condition(){
     let number = 6;
@@ -34,4 +36,17 @@ fn if_in_let_statement(){
     let number = if condition {5} else {6};
 
     println!("The value of number is : {number}");
+}
+
+fn repetition_in_loop(){
+    let mut counter = 0;
+let result  = loop {
+    counter +=1;
+    println!("{counter}");
+    if counter == 10{
+        break counter * 2;
+    }
+};
+
+println!("the result is {result}");
 }
