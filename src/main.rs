@@ -15,6 +15,8 @@ fn main() {
     if_in_let_statement();
 
     repetition_in_loop();
+
+    multiple_loop();
 }
 fn multiple_condition(){
     let number = 6;
@@ -49,4 +51,26 @@ let result  = loop {
 };
 
 println!("the result is {result}");
+}
+
+fn multiple_loop(){
+    let mut count = 0;
+
+    'counting_up: loop{
+        println!("count = {count}");
+        let mut remaining = 10;
+
+        loop{
+            println!("remianing = {remaining}");
+            if remaining == 9 {
+                break;
+            }
+            if count == 2{
+                break 'counting_up;
+            }
+            remaining -= 1;
+        }
+        count += 1;
+    }
+    println!("End count = {count}");
 }
